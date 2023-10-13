@@ -1,10 +1,8 @@
 const db = require("../models/db");
-const { param } = require("../routes/categoriaRoutes");
-
 // GET /categorias
 
 exports.listarCategorias = async (req, res) => {
-  const sql = "SELECT * FROM categorias";
+  const sql = "CALL obtener_productos()";
 
   try {
     const [categorias, fields] = await db.query(sql);
