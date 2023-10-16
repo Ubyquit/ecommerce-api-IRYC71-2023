@@ -2,7 +2,7 @@ const db = require("../models/db");
 // GET /categorias
 
 exports.listarCategorias = async (req, res) => {
-  const sql = "CALL obtener_productos()";
+  const sql = "SELECT * FROM categorias";
 
   try {
     const [categorias, fields] = await db.query(sql);
